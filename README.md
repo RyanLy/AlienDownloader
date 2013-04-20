@@ -1,6 +1,7 @@
 AlienDownloader
 ===============
-This script downloads the alien image in a Subreddit and saves it into the same folder as the script.
+This script downloads the alien image in a Subreddit and saves it into the same folder as the script.<br\>
+Note: This only works on Subreddit URLs and not the actual http://www.reddit.com
 
 ###This repository contains of two scripts:  
 - 'RyanLyAlienDownloader.py' which is coded in Python 2.7.4
