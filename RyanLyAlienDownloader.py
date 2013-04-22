@@ -1,15 +1,17 @@
 import urllib, re
+from urlparse import urlparse
 var = raw_input("Enter your URL to the subreddit: ")
-if len(var) > 6:
-    if var[0:3] == "www":
-        var = "".join(("http://",var))    
-    elif var[0:6] == "reddit":
-        var = "".join(("http://www.",var))
-if (var[0:21] == "http://www.reddit.com"):
+o = urlparse(var)
+if o.scheme == '':
+    var = "".join(("http://", var))
+source = urllib.urlopen(var).read()
+a = 0
+while len(source) <= 12000:
     source = urllib.urlopen(var).read()
-    m = source.find('id=\'header-img\'',0)
-else:
-    m = -1
+    a = a+1
+    if a == 100:
+        break
+m = source.find('id=\'header-img\'',0)
 if m == -1:
     print("Sorry!  Unable to find the image. Please check if link is valid or try again.")
 else:
@@ -19,4 +21,4 @@ else:
     urllib.urlretrieve(link, 'Alien.jpg')
     print("Your file has been downloaded into the same directory as this program.")
     print("The file is named alien.jpg")
-raw_input("Press any key and enter to quit: ")
+raw_input("Press enter to quit: ")
