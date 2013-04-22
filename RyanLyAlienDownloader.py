@@ -5,12 +5,8 @@ o = urlparse(var)
 if o.scheme == '':
     var = "".join(("http://", var))
 source = urllib.urlopen(var).read()
-a = 0
-while len(source) <= 12000:
+while source[-7:] != '</html>':
     source = urllib.urlopen(var).read()
-    a = a+1
-    if a == 100:
-        break
 m = source.find('id=\'header-img\'',0)
 if m == -1:
     print("Sorry!  Unable to find the image. Please check if link is valid or try again.")
