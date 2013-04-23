@@ -25,6 +25,6 @@ To run 'RyanLyAlienDownloader.exe', you must have a 64-bit version of windows.<b
 1. Make sure all the files are in the same folder.<br\>
 2. Run 'RyanLyAlienDownloader.exe' <br\>
 Note: If the script does not run, download and install this package: http://www.microsoft.com/en-us/download/details.aspx?id=29<br\>
-3. The script should prompt you for a URL to a subreddit.<br\> (eg. http://www.reddit.com/r/uwaterloo)
+3. The script should prompt you for a URL to a subreddit.<br\> (eg. http://www.reddit.com/r/uwaterloo)<br\>
 4. When a valid URL is typed in, the script should state that the file has been downloaded.<br\>
 The image file is named "Alien.jpg", and should appear in the same folder as the script.
