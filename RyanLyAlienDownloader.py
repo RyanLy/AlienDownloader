@@ -1,9 +1,9 @@
 import urllib, re
 from urlparse import urlparse
-var = raw_input("Enter your URL to the subreddit: ")
+var = raw_input("Enter the name of your subreddit: ")
 o = urlparse(var)
 if o.scheme == '':
-    var = "".join(("http://", var))
+    var = "".join(("http://reddit.com/r/", var))
 source = urllib.urlopen(var).read()
 while source[-7:] != '</html>':
     source = urllib.urlopen(var).read()
